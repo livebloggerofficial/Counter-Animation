@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+section {
+  height: 100vh;
+  background: #fefae0;
+  display: grid;
+  place-items: center;
+  font-size: 90px;
+}
+
+.stats-container {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 30px auto;
+  max-width: 1000px;
+  padding-inline: 16px;
+}
+
+.stats-container .stat {
+  background: #ef233c;
+  padding: 24px;
+  text-align: center;
+  color: #edf2f4;
+}
+
+.stats-container .stat .odometer {
+  font-size: 50px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.stats-container .stat .type {
+  font-size: 20px;
+}
+
+.odometer.plus {
+  position: relative;
+}
+
+.odometer.plus::after {
+  content: "+";
+  position: absolute;
+  top: 0;
+  right: -16px;
+  font-size: 20px;
+}
+
+@media (max-width: 700px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+}
